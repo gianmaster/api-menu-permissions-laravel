@@ -15,6 +15,7 @@ class UsersSeeder extends Seeder
     {
 
         $user = array(
+            'username' => 'gcercado',
             'firstname' => 'Giancarlos',
             'lastname' => 'Cercado',
             'email' => 'giancarloscercado@gmail.com',
@@ -22,6 +23,8 @@ class UsersSeeder extends Seeder
         );
 
         User::create($user);
+
+        factory(App\User::class, 10)->create();        
         
     }
 }
