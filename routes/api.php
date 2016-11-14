@@ -21,6 +21,10 @@ Route::get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'v1', 'middleware' => 'auth:api'], function(){
     Route::get('/user-list', 'UsersController@getUserAll');
+    
+    /* Chat Urls*/
+    Route::post('get-user-conversation', 'ChatController@getUserConversation');
+
 });
 
 /*
